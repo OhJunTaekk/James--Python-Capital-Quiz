@@ -28,7 +28,16 @@ def Instructions():
     print("") 
     choice() 
 
+# 추가된 코드 설명
+# Insert_User()을 만들어 게임 시작 전에 이름을 입력받는 함수를 만든다.
+def Insert_Username():
+     username = input("Insert your name : ")
+     # 입력한 이름을 리턴한다.
+     return username
+
 def startGame(): 
+    # 게임 시작 전 이름을 입력받는다다
+    username = Insert_Username()
 
     score = 0 
     
@@ -56,6 +65,9 @@ def startGame():
         endTime = time.time() 
         testTime = int(endTime - startTime) 
         print("")
+        
+        # 게임 후 이름을 출력하는 코드드
+        print("{}'s Game".format(username))
 
         if score == 0:
              print("You'd better get the map out! you was unable to guess any capitals correctly 0/10")
