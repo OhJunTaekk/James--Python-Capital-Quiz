@@ -20,6 +20,12 @@ def choice():
      else:
         Instructions() 
 
+# Insert_User()을 만들어 게임 시작 전에 이름을 입력받는 함수를 만든다.
+def Insert_Username():
+     username = input("Insert your name : ")
+     # 입력한 이름을 리턴한다.
+     return username
+
 def Instructions(): 
     print("")
     print("Help:")
@@ -28,15 +34,8 @@ def Instructions():
     print("") 
     choice() 
 
-# 추가된 코드 설명
-# Insert_User()을 만들어 게임 시작 전에 이름을 입력받는 함수를 만든다.
-def Insert_Username():
-     username = input("Insert your name : ")
-     # 입력한 이름을 리턴한다.
-     return username
-
 def startGame(): 
-    # 게임 시작 전 이름을 입력받는다다
+    # 게임 시작 전 이름을 입력받는다.
     username = Insert_Username()
 
     score = 0 
@@ -66,7 +65,7 @@ def startGame():
         testTime = int(endTime - startTime) 
         print("")
         
-        # 게임 후 이름을 출력하는 코드드
+        # 게임 후 이름을 출력하는 코드다
         print("{}'s Game".format(username))
 
         if score == 0:
